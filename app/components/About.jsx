@@ -25,6 +25,12 @@ var About = (props) => {
       </ul>
       <div >
         <p className="text-center">Made by - <b className="bold">Shubham Chinda</b>!</p>
+        <ul>
+          <li>
+            <a href="https://github.com/Shubhamchinda" target="_blank"><b>Github Profile</b>
+              </a>
+          </li>
+        </ul>
       </div>
     </div>
   );
