@@ -16,13 +16,16 @@ var About = (props) => {
       </p>
       <ul>
         <li>
-           <a href="https://facebook.github.io/react" target="_blank">React</a> - This is javacript framework.
+           <a href="https://facebook.github.io/react" target="_blank"><b>React</b></a> - This is a javacript framework.
         </li>
         <li>
-          <a href="http://openweathermap.org" target="_blank">Open Weather Map</a> - I used the Open Weather Map API
+          <a href="http://openweathermap.org" target="_blank"><b>Open Weather Map</b></a> - I used the Open Weather Map API
             to search for weather data by city name.
         </li>
       </ul>
+      <div >
+        <p className="text-center">Made by - <b className="bold">Shubham Chinda</b>!</p>
+      </div>
     </div>
   );
 };

@@ -13,13 +13,13 @@ var Examples = (props) => {
   return (
     <div>
       <h1 className="text-center page-title text-color">Examples</h1>
-      <p>Here are some fer example locations to try!</p>
+      <p>Here are some few example locations to try!</p>
       <ol>
         <li>
-          <Link to='/?location=New Delhi'>New Delhi, India</Link>
+          <Link to='/?location=New Delhi'><b>New Delhi, India</b></Link>
         </li>
         <li>
-          <Link to='/?location=London'>London, Uk</Link>
+          <Link to='/?location=London'><b>London, Uk</b></Link>
         </li>
       </ol>
     </div>
