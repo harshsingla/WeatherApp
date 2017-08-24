@@ -12,11 +12,13 @@ var Weather = React.createClass({
   },
   handleSearch: function (location){
     var that = this;
-    debugger;
+
 
       this.setState({
         isLoading: true,
-        errorMessage: 'Error : City not found'
+        errorMessage: undefined,
+        location: undefined,
+        temp:undefined
       });
 
     openWeatherMap.getTemp(location).then(function (temp){
@@ -33,6 +35,22 @@ var Weather = React.createClass({
     });
       });
   },
+  componentDidMount: function() {
+    var location = this.props.location.query.location;
+
+    if (location && location.length >0){
+      this.handleSearch(location);
+      window.location.hash = '#/';
+    }
+  },
+  componentWillReceiveProps: function(newProps) {
+    var location = newProps.location.query.location;
+
+    if (location && location.length >0){
+      this.handleSearch(location);
+      window.location.hash = '#/';
+    }
+  },
   render: function () {
     var {isLoading, location, temp, errorMessage} = this.state;
     function renderMessage(){
@@ -44,15 +62,15 @@ var Weather = React.createClass({
     }
     function renderError () {
       if (typeof errorMessage === 'string'){
-        debugger;
+
         return(
-          <ErrorM message={errorMessage}/>
+          <ErrorM message='Error: City not found!'/>
         )
       }
     }
     return (
       <div >
-        <h1 className="text-center page-title">Get Weather</h1>
+        <h1 className="text-center page-title text-color">Get Weather</h1>
       <WeatherForm onSearch={this.handleSearch}/>
       {renderMessage()}
       {renderError()}
