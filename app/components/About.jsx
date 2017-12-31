@@ -16,7 +16,7 @@ var About = (props) => {
       </p>
       <ul>
         <li>
-           <a href="https://facebook.github.io/react" target="_blank"><b>React</b></a> - This is a javacript framework.
+           <a href="https://facebook.github.io/react" target="_blank"><b>React</b></a> - A javacript framework.
         </li>
         <li>
           <a href="http://openweathermap.org" target="_blank"><b>Open Weather Map</b></a> - I used the Open Weather Map API
